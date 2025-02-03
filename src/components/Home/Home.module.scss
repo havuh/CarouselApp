@@ -1,0 +1,28 @@
+.home {
+  @extend %section;
+}
+
+.wrapper {
+  @extend %section-wrapper;
+  width: auto;
+}
+
+.header {
+  text-align: center;
+  color: #d8e6ea;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &--title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(0deg, #ffd859, #bfdf6b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 4px;
+  }
+  &--subtitle {
+    font-size: 1.2rem;
+  }
+}

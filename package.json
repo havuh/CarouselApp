@@ -1,0 +1,33 @@
+{
+  "name": "carousel-exercises",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ./src/\"**/*.{js,jsx,ts,tsx,scss,css,json}\""
+  },
+  "dependencies": {
+    "@types/node": "20.4.1",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "clsx": "^1.2.1",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.9",
+    "file-saver": "^2.0.5",
+    "framer-motion": "^10.13.0",
+    "next": "^13.4.12",
+    "node-vibrant": "^3.2.1-alpha.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.63.6",
+    "swiper": "^10.0.4",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "import-sort-style-module": "^6.0.0",
+    "prettier": "^3.0.0"
+  }
+}

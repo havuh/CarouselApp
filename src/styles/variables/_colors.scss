@@ -1,0 +1,35 @@
+@use "sass:map";
+
+//TODO: colors not working
+
+$default-colors: (
+  --color-white: #ffffff,
+  --color-black: #000000,
+);
+
+$colors: map.merge(
+  $default-colors,
+  (
+    // Primary colors
+    --color-primary: #101927,
+    // Secondary colors
+    --color-secondary: #ffd859,
+
+    // Status colors
+    --color-warning: #ffb82e,
+    --color-success: #06c270,
+    --color-error: #ff3b3b,
+    --color-info: #086fdd,
+
+    // Text colors
+    --color-text-primary: #222f28,
+    --color-text-secondary: #7c8982,
+
+    // Opacity colors
+    // Disabled colors
+    --color-disabled: #dbdfdd,
+
+    // Neutral colors
+    // Add your custom colors here
+  )
+);

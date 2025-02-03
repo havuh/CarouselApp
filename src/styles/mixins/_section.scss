@@ -1,0 +1,25 @@
+%section {
+  width: 100%;
+  position: relative;
+}
+
+%section-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 648px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
