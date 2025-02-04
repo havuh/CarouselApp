@@ -1,13 +1,14 @@
-import { Nunito } from 'next/font/google'
+import { Public_Sans } from 'next/font/google'
 import '@styles/app.scss'
 
 export const metadata = {
   title: 'Rio',
-  description: 'Carousels for everyone',
+  description: 'Carousel examples website with SwiperJS',
 }
 
-const font = Nunito({
+const font = Public_Sans({
   subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
 })
 
 export default function RootLayout({

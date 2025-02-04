@@ -1,4 +1,4 @@
-export interface Image {
+export interface SlideImage {
   id: number
   src: string
   altSrc: string

@@ -1,0 +1,38 @@
+.carousel {
+  padding: 16px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.header-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & > span {
+      color: var(--color-secondary);
+      font-weight: 500;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    & > span {
+      color: var(--color-secondary);
+      font-weight: 500;
+    }
+  }
+}

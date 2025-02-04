@@ -1,0 +1,13 @@
+@mixin set-css-vars($vars, $transform: false) {
+  @at-root {
+    :root {
+      @each $name, $value in $vars {
+        @if $transform == false {
+          #{$name}: #{$value};
+        } @else {
+          --#{$name}: #{$value};
+        }
+      }
+    }
+  }
+}

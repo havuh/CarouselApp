@@ -1,15 +1,19 @@
 import Image from 'next/image'
-import s from './Card.module.scss'
 import cn from 'clsx'
 import { useState } from 'react'
+import { SlideImage } from '@/@core/types/mocks'
 
-type CardProps = {
-  src: string
-  altSrc: string
+import s from './CenterSlideCard.module.scss'
+
+type CenterSlideCardProps = Omit<SlideImage, 'id' | 'alt'> & {
   alt?: string
 }
 
-export default function Card({ src, altSrc, alt = '' }: CardProps) {
+export default function CenterSlideCard({
+  src,
+  altSrc,
+  alt = '',
+}: CenterSlideCardProps) {
   const [imageSrc, setImageSrc] = useState(src)
 
   const handleImageError = (e: any) => {

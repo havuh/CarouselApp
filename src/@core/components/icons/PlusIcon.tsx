@@ -1,4 +1,5 @@
-import type { IconProps } from '@core/types/components'
+import { IconProps } from "@core/types/components";
+
 
 export default function GridAltIcon({
   className = 'icon',
