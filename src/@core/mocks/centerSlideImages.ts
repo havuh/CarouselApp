@@ -1,6 +1,6 @@
 import { SlideImage } from '@core/types/mocks'
 
-export const GENSHIN_IMAGES: SlideImage[] = [
+export const CENTER_SLIDE_IMAGES: SlideImage[] = [
   {
     id: 1,
     src: '/images/genshin-1.jpg',

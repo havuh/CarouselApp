@@ -1,35 +1,25 @@
 'use client'
 
-import { useScreenWidth } from '@/@core/hooks/useScreenWidth'
+import { useScreenWidth } from '@core/hooks/useScreenWidth'
 import { Autoplay, EffectCoverflow } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import s from './CenterSlides.module.scss'
-import { SlideImage } from '@/@core/types/mocks'
+import { SlideImage } from '@core/types/mocks'
 import CenterSlideCard from './CenterSlideCard'
+import CenterSlideConfig from './centerSlide.config'
+
+import s from './CenterSlides.module.scss'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-coverflow'
 
-const coverflowEffect = {
-  rotate: 0,
-  stretch: -100,
-  depth: 200,
-  modifier: 1,
-  slideShadows: false,
-}
-
-const autoplayEffect = {
-  delay: 5000,
-  disableOnInteraction: false,
-}
-
 interface CenterSlidesProps {
   slides: SlideImage[]
 }
 
 export default function CenterSlides({ slides }: CenterSlidesProps) {
+  const { coverflowEffect, autoplayEffect } = CenterSlideConfig()
   const isLargeScreen = useScreenWidth(1440)
 
   return (
@@ -45,9 +35,9 @@ export default function CenterSlides({ slides }: CenterSlidesProps) {
         centeredSlides
         loop
       >
-        {slides.map((i) => (
-          <SwiperSlide key={i.id}>
-            <CenterSlideCard src={i.src} altSrc={i.altSrc} />
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <CenterSlideCard src={slide.src} altSrc={slide.altSrc} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,6 +1,7 @@
-import { GENSHIN_IMAGES } from '@core/mocks/images'
-import { CarouselCard } from '@/@core/components/ui'
-import CenterSlides from '@/components/common/Carousels'
+import { CENTER_SLIDE_IMAGES } from '@core/mocks/centerSlideImages'
+import { APPLE_SLIDE_IMAGES } from '@core/mocks/appleSlideImages'
+import { CarouselCard } from '@core/components/ui'
+import { AppleCarousel, CenterSlides } from '@/components/common/Carousels'
 
 import s from './Home.module.scss'
 
@@ -14,9 +15,10 @@ export default function Home() {
             Revisa todos los diseños que hemos creado para ti
           </p>
         </div>
-        <CarouselCard imageLength={GENSHIN_IMAGES.length}>
-          <CenterSlides slides={GENSHIN_IMAGES} />
+        <CarouselCard imageLength={CENTER_SLIDE_IMAGES.length}>
+          <CenterSlides slides={CENTER_SLIDE_IMAGES} />
         </CarouselCard>
+        <AppleCarousel slides={APPLE_SLIDE_IMAGES} />
       </div>
     </section>
   )

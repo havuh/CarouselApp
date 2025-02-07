@@ -28,13 +28,16 @@ const nextConfig = {
   env: {
     customKey: 'random-value',
   },
+  images: {
+    domains: ['is1-ssl.mzstatic.com'],
+  },
   // Extensiones de las páginas que se utiliza en el proyecto. En este caso, p.tsx y tsx.
   pageExtensions: ['p.tsx', 'tsx'],
   // Permite las redirecciones al acceder a una ruta específica
   async redirects() {
     return [
       {
-        source: '/test-page',
+        source: '/redirect',
         destination: '/',
         permanent: true,
       },
