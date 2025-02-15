@@ -1,9 +1,7 @@
-@import "variables/variables";
-
 /**
- * Include Media
- * https://eduardoboucas.github.io/include-media/
- */
+* Include Media
+* https://eduardoboucas.github.io/include-media/
+*/
 @import "/node_modules/~include-media/dist/_include-media";
 
-@import "mixins/mixins";
+@import "core/core";
