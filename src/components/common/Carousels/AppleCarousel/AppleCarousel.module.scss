@@ -1,4 +1,10 @@
-.swiper-slide {
+.apple-swiper {
+  :global(.swiper-wrapper) {
+    transition-timing-function: cubic-bezier(0.8, 0, 0.45, 0.91) !important;
+  }
+}
+
+.apple-slide {
   width: auto;
   position: relative;
 }
@@ -10,7 +16,7 @@
   transform: translateY(-50%);
   z-index: 10;
 
-  @media screen and (min-width: 735px) {
+  @include media(">=apple-tablet") {
     display: none;
   }
 
@@ -31,7 +37,7 @@
     left: 20px;
     background: url("/images/arrows/arrow-back.svg") no-repeat center;
 
-    @media screen and (min-width: 480px) {
+    @include media(">=apple-phone") {
       left: 40px;
     }
   }
@@ -45,7 +51,7 @@
     left: -38px;
     background: url("/images/arrows/arrow-forward.svg") no-repeat center;
 
-    @media screen and (min-width: 480px) {
+    @include media(">=apple-tablet") {
       left: -64px;
     }
   }
@@ -60,178 +66,12 @@
   :global(.swiper-pagination-bullet) {
     width: 8px;
     height: 8px;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--rgba-color-black-30);
     opacity: 1;
     margin: 0 8px !important;
   }
 
   :global(.swiper-pagination-bullet-active) {
     background: #000;
-  }
-}
-
-.card {
-  position: relative;
-  width: 274px;
-  height: 495px;
-
-  @media screen and (min-width: 735px) {
-    width: auto;
-    height: 367px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    height: 523px;
-  }
-
-  @media screen and (min-width: 1444px) {
-    height: 667px;
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7)),
-      linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.4) 0%,
-        rgba(255, 255, 255, 0) 200px
-      );
-
-    @media screen and (min-width: 735px) {
-      background: radial-gradient(
-        100% 33% at left bottom,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(255, 255, 255, 0)
-      );
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      transition: background 0.7s;
-    }
-
-    &--lat::after {
-      background: rgba(255, 255, 255, 0.7);
-    }
-
-    &--top {
-      @media screen and (min-width: 735px) {
-        display: none;
-      }
-
-      &--header {
-        padding-top: 20px;
-        padding-bottom: 5px;
-        text-align: center;
-      }
-
-      &--title {
-        text-align: center;
-
-        &__img {
-          object-fit: contain;
-        }
-      }
-    }
-
-    &__bottom {
-      display: flex;
-      opacity: 0;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: auto;
-
-      transition: all 0.8s;
-      transition-timing-function: cubic-bezier(0.8, -0.04, 0.64, 0.82);
-
-      @media screen and (min-width: 735px) {
-        flex-direction: row-reverse;
-        padding-inline: 24px;
-        gap: 18px;
-        align-items: center;
-        justify-content: flex-end;
-      }
-
-      &--active {
-        opacity: 1;
-        transform: translateY(-32px);
-      }
-
-      &--content {
-        text-align: center;
-        padding-inline: 12px;
-        color: #f5f5f7;
-        font-size: 15px;
-
-        @media screen and (min-width: 735px) {
-          text-align: start;
-          max-width: 60%;
-          font-size: 17px;
-          padding-inline: 0;
-          text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
-        }
-
-        &__genre {
-          display: block;
-          font-weight: 700;
-          margin-bottom: 4px;
-
-          @media screen and (min-width: 735px) {
-            display: inline;
-          }
-        }
-
-        &__dot {
-          display: none;
-
-          @media screen and (min-width: 735px) {
-            display: inline;
-            margin-inline: 6px;
-          }
-        }
-
-        &__title {
-          font-weight: 400;
-        }
-      }
-
-      &--cta {
-        font-size: 14px;
-        background: #f5f5f7;
-        color: var(--color-black);
-        width: max-content;
-        display: flex;
-        line-height: 1.42859;
-        font-weight: 400;
-        border-radius: 999px;
-        min-width: 30px;
-        padding: 7px 15px;
-        margin: auto;
-
-        @media screen and (min-width: 735px) {
-          margin: 0;
-        }
-      }
-    }
   }
 }

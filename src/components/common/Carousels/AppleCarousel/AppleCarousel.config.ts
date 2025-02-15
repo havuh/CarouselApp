@@ -6,10 +6,10 @@ export default function AppleCarouselConfig() {
     slidesPerView: 'auto',
     centeredSlides: true,
     spaceBetween: 15,
-    speed: 800,
+    speed: 1000,
     loop: true,
     autoplay: {
-      delay: 4000,
+      delay: 6000,
       disableOnInteraction: true,
       pauseOnMouseEnter: true,
     },

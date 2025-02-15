@@ -3,6 +3,26 @@
 $default-colors: (
   --color-white: #ffffff,
   --color-black: #000000,
+  --rgba-color-black: rgba(0, 0, 0, 0),
+  --rgba-color-black-10: rgba(0, 0, 0, 0.1),
+  --rgba-color-black-20: rgba(0, 0, 0, 0.2),
+  --rgba-color-black-30: rgba(0, 0, 0, 0.3),
+  --rgba-color-black-40: rgba(0, 0, 0, 0.4),
+  --rgba-color-black-50: rgba(0, 0, 0, 0.5),
+  --rgba-color-black-60: rgba(0, 0, 0, 0.6),
+  --rgba-color-black-70: rgba(0, 0, 0, 0.7),
+  --rgba-color-black-80: rgba(0, 0, 0, 0.8),
+  --rgba-color-black-90: rgba(0, 0, 0, 0.9),
+  --rgba-color-white-10: rgba(255, 255, 255, 0.1),
+  --rgba-color-white-20: rgba(255, 255, 255, 0.2),
+  --rgba-color-white-30: rgba(255, 255, 255, 0.3),
+  --rgba-color-white-40: rgba(255, 255, 255, 0.4),
+  --rgba-color-white-50: rgba(255, 255, 255, 0.5),
+  --rgba-color-white-60: rgba(255, 255, 255, 0.6),
+  --rgba-color-white-70: rgba(255, 255, 255, 0.7),
+  --rgba-color-white-80: rgba(255, 255, 255, 0.8),
+  --rgba-color-white-90: rgba(255, 255, 255, 0.9),
+  --transparent: rgba(255, 255, 255, 0),
 );
 
 $colors: map.merge(
@@ -12,7 +32,7 @@ $colors: map.merge(
     --color-primary: #fb2434,
 
     // Secondary colors
-    --color-secondary: #008080,
+    --color-secondary: #000000,
 
     // Variant colors
     --color-primary-100: #fcd2d6,
@@ -25,7 +45,6 @@ $colors: map.merge(
     --color-primary-800: #5f0e19,
     --color-primary-900: #2b070d,
 
-
     // Status colors
     --color-warning: #ffb82e,
     --color-success: #06c270,
@@ -33,7 +52,7 @@ $colors: map.merge(
     --color-info: #086fdd,
 
     // Text colors
-    --color-text-primary: #0a1322,
+    --color-text-primary: #3b3b3b,
 
     // Opacity colors
     // Disabled colors
