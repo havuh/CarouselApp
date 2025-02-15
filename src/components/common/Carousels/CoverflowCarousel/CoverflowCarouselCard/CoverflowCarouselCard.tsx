@@ -3,17 +3,17 @@ import cn from 'clsx'
 import { useState } from 'react'
 import { SlideImage } from '@/@core/types/mocks'
 
-import s from './CenterSlideCard.module.scss'
+import s from './CoverflowCarouselCard.module.scss'
 
-type CenterSlideCardProps = Omit<SlideImage, 'id' | 'alt'> & {
+type CoverflowCarouselCardProps = Omit<SlideImage, 'id' | 'alt'> & {
   alt?: string
 }
 
-export default function CenterSlideCard({
+export default function CoverflowCarouselCard({
   src,
   altSrc,
   alt = '',
-}: CenterSlideCardProps) {
+}: CoverflowCarouselCardProps) {
   const [imageSrc, setImageSrc] = useState(src)
 
   const handleImageError = (e: any) => {

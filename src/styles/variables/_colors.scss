@@ -9,11 +9,22 @@ $colors: map.merge(
   $default-colors,
   (
     // Primary colors
-    --color-primary: #101927,
-    // Secondary colors
-    --color-secondary: #06c445,
+    --color-primary: #fb2434,
 
-    --color-primary-100: #f6f7fa,
+    // Secondary colors
+    --color-secondary: #008080,
+
+    // Variant colors
+    --color-primary-100: #fcd2d6,
+    --color-primary-200: #f9a5ad,
+    --color-primary-300: #fc8c9c,
+    --color-primary-400: #f34b5b,
+    --color-primary-500: #fb2434,
+    --color-primary-600: #cd1c2c,
+    --color-primary-700: #931522,
+    --color-primary-800: #5f0e19,
+    --color-primary-900: #2b070d,
+
 
     // Status colors
     --color-warning: #ffb82e,

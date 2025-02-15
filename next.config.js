@@ -29,7 +29,7 @@ const nextConfig = {
     customKey: 'random-value',
   },
   images: {
-    domains: ['is1-ssl.mzstatic.com'],
+    domains: ['is1-ssl.mzstatic.com', 'www.apple.com'],
   },
   // Extensiones de las páginas que se utiliza en el proyecto. En este caso, p.tsx y tsx.
   pageExtensions: ['p.tsx', 'tsx'],

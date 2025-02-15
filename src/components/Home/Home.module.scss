@@ -2,12 +2,9 @@
   @extend %section;
 }
 
-.wrapper {
-  @extend %section-wrapper;
-  width: auto;
-}
-
 .header {
+  @extend %section-wrapper;
+
   text-align: center;
   color: var(--color-text-primary);
   padding-top: 32px;
