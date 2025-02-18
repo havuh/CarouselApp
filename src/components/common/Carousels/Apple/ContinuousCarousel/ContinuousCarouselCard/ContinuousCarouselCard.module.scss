@@ -16,31 +16,8 @@
     }
   }
 
-  &__copy {
+  &__image-container {
     position: relative;
-    width: 100%;
-    margin-top: 6px;
-
-    @include media(">=apple-tablet") {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 70%;
-      margin-top: 0;
-    }
-
-    &--title {
-      font-size: 12px;
-      text-align: start;
-      line-height: 1.33;
-      letter-spacing: -0.01em;
-
-      @include media(">=apple-tablet") {
-        color: var(--color-white);
-        font-size: 16px;
-        padding: 20px 15px;
-      }
-    }
   }
 
   &__overlay {
@@ -78,6 +55,33 @@
 
       @include media(">apple-tablet") {
         margin: 0;
+      }
+    }
+  }
+
+  &__copy {
+    position: relative;
+    width: 100%;
+    margin-top: 6px;
+
+    @include media(">=apple-tablet") {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70%;
+      margin-top: 0;
+    }
+
+    &--title {
+      font-size: 12px;
+      text-align: start;
+      line-height: 1.33;
+      letter-spacing: -0.01em;
+
+      @include media(">=apple-tablet") {
+        color: var(--color-white);
+        font-size: 16px;
+        padding: 20px 15px;
       }
     }
   }

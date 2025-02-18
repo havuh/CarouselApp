@@ -1,7 +1,12 @@
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { SwiperOptions } from 'swiper/types'
 
-export default function AppleCarouselConfig() {
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+export default function MoviesCarouselConfig() {
   const swiperConfig: SwiperOptions = {
     slidesPerView: 'auto',
     centeredSlides: true,
@@ -9,7 +14,7 @@ export default function AppleCarouselConfig() {
     speed: 1000,
     loop: true,
     autoplay: {
-      delay: 6000,
+      delay: 5000,
       disableOnInteraction: true,
       pauseOnMouseEnter: true,
     },

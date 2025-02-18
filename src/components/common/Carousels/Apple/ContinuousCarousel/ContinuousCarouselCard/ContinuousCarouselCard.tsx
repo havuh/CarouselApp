@@ -1,17 +1,17 @@
 'use client'
 
-import { AppleContinuousSlideImage } from '@core/types/mocks'
+import { ContinuousSlideImage } from '@core/types/mocks'
 import Image from 'next/image'
 import { useSwiper } from 'swiper/react'
 
-import s from './AppleContinuousCarouselCard.module.scss'
+import s from './ContinuousCarouselCard.module.scss'
 
-interface AppleContinuousCarouselCardProps extends AppleContinuousSlideImage {}
+interface ContinuousCarouselCardProps extends ContinuousSlideImage {}
 
-export default function AppleContinuousCarouselCard({
+export default function ContinuousCarouselCard({
   title,
   src,
-}: AppleContinuousCarouselCardProps) {
+}: ContinuousCarouselCardProps) {
   const prefix = 'continuous-slide'
 
   const swiper = useSwiper()
@@ -34,19 +34,21 @@ export default function AppleContinuousCarouselCard({
       onMouseLeave={() => handleMouseLeave()}
       onBlur={handleMouseLeave}
     >
-      <Image
-        src={src}
-        alt={title}
-        width={500}
-        height={500}
-        sizes="100vw"
-        className={s[`${prefix}__image`]}
-      />
+      <div className={s[`${prefix}__image-container`]}>
+        <Image
+          src={src}
+          alt={title}
+          width={500}
+          height={500}
+          sizes="100vw"
+          className={s[`${prefix}__image`]}
+        />
+        <div className={s[`${prefix}__overlay`]}>
+          <button className={s[`${prefix}__overlay--cta`]}>Play now</button>
+        </div>
+      </div>
       <div className={s[`${prefix}__copy`]}>
         <p className={s[`${prefix}__copy--title`]}>{title}</p>
-      </div>
-      <div className={s[`${prefix}__overlay`]}>
-        <button className={s[`${prefix}__overlay--cta`]}>Play now</button>
       </div>
     </div>
   )

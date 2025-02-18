@@ -6,9 +6,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import cn from 'clsx'
 
-import s from './AppleCarouselCard.module.scss'
+import s from './MoviesCarouselCard.module.scss'
 
-export default function AppleCarouselCard({
+export default function MoviesCarouselCard({
   src,
   mobileSrc,
   imgTitle,

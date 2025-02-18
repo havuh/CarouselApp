@@ -1,0 +1,11 @@
+.continuous {
+  &-swiper {
+    :global(.swiper-wrapper) {
+      transition-timing-function: linear !important;
+    }
+  }
+
+  &-slide {
+    width: auto !important;
+  }
+}

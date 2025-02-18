@@ -1,9 +1,11 @@
 import { APPLE_SLIDE_IMAGES } from '@core/mocks/appleSlideImages'
 import { APPLE_CONTINUOUS_SLIDE_IMAGES } from '@core/mocks/appleContinuousSlideImages'
 import {
-  AppleCarousel,
-  AppleContinuousCarousel,
-} from '@/components/common/Carousels'
+  MoviesCarousel,
+  ContinuousCarousel,
+} from '@/components/common/Carousels/Apple'
+import { CarouselControlButton } from '@/components/common/Carousels/Apple/Controls'
+import { CarouselControlsProvider } from '@/components/common/Carousels/Apple/context'
 
 import s from './Home.module.scss'
 
@@ -16,10 +18,13 @@ export default function Home() {
           Revisa los diseños que hemos creado para ti
         </p>
       </div>
-      <AppleCarousel slides={APPLE_SLIDE_IMAGES} />
-      <div className={s['continuous-carousel']}>
-        <AppleContinuousCarousel slides={APPLE_CONTINUOUS_SLIDE_IMAGES} />
-      </div>
+      <CarouselControlsProvider>
+        <MoviesCarousel slides={APPLE_SLIDE_IMAGES} />
+        <div className={s['continuous-carousel']}>
+          <ContinuousCarousel slides={APPLE_CONTINUOUS_SLIDE_IMAGES} />
+          <CarouselControlButton />
+        </div>
+      </CarouselControlsProvider>
     </section>
   )
 }

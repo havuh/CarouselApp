@@ -15,7 +15,7 @@ export interface AppleSlideImage {
   title: string
 }
 
-export interface AppleContinuousSlideImage {
+export interface ContinuousSlideImage {
   id: number
   src: string
   mobileSrc: string
