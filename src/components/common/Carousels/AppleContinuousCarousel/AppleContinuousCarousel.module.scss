@@ -1,0 +1,45 @@
+.apple-continuous {
+  &-swiper {
+    :global(.swiper-wrapper) {
+      transition-timing-function: linear !important;
+    }
+  }
+
+  &-slide {
+    width: auto !important;
+  }
+
+  &-controls {
+    display: flex;
+    justify-content: flex-end;
+
+    &__player {
+      margin: 16px;
+      padding: 6px;
+      border-radius: 999px;
+      background-color: #d2d2d7;
+
+      &:hover {
+        background-color: #c6c6c8;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--color-black);
+        -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGc+PHBhdGggZD0iTTUsMTUuMjVWNC43N0ExLjQ0LDEuNDQsMCwwLDEsNi40NCwzLjE1YTEuODYsMS44NiwwLDAsMSwxLjExLjMxbDguNTMsNWMuNzYuNDQsMS4xNy44LDEuMTcsMS41MXMtLjQxLDEuMDctMS4xNywxLjUxbC04LjUzLDVhMS44NiwxLjg2LDAsMCwxLTEuMTEuMzFBMS40MiwxLjQyLDAsMCwxLDUsMTUuMjVaIi8+PC9nPjwvc3ZnPg==);
+        mask: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGc+PHBhdGggZD0iTTUsMTUuMjVWNC43N0ExLjQ0LDEuNDQsMCwwLDEsNi40NCwzLjE1YTEuODYsMS44NiwwLDAsMSwxLjExLjMxbDguNTMsNWMuNzYuNDQsMS4xNy44LDEuMTcsMS41MXMtLjQxLDEuMDctMS4xNywxLjUxbC04LjUzLDVhMS44NiwxLjg2LDAsMCwxLTEuMTEuMzFBMS40MiwxLjQyLDAsMCwxLDUsMTUuMjVaIi8+PC9nPjwvc3ZnPg==);
+      }
+
+      &.active {
+        &::after {
+          -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyBpZD0iRXhwb3J0YWJsZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMWQxZDFmO308L3N0eWxlPjwvZGVmcz48ZyBpZD0icGF1c2UiPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMy43NSIgeT0iMyIgd2lkdGg9IjQuNSIgaGVpZ2h0PSIxNCIgcng9IjEuNSIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMTEuNzUiIHk9IjMiIHdpZHRoPSI0LjUiIGhlaWdodD0iMTQiIHJ4PSIxLjUiLz48L2c+PC9zdmc+);
+          mask: url(data:image/svg+xml;base64,PHN2ZyBpZD0iRXhwb3J0YWJsZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMWQxZDFmO308L3N0eWxlPjwvZGVmcz48ZyBpZD0icGF1c2UiPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMy43NSIgeT0iMyIgd2lkdGg9IjQuNSIgaGVpZ2h0PSIxNCIgcng9IjEuNSIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMTEuNzUiIHk9IjMiIHdpZHRoPSI0LjUiIGhlaWdodD0iMTQiIHJ4PSIxLjUiLz48L2c+PC9zdmc+);
+        }
+      }
+    }
+  }
+}

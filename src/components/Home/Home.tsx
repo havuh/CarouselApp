@@ -1,5 +1,9 @@
 import { APPLE_SLIDE_IMAGES } from '@core/mocks/appleSlideImages'
-import { AppleCarousel } from '@/components/common/Carousels'
+import { APPLE_CONTINUOUS_SLIDE_IMAGES } from '@core/mocks/appleContinuousSlideImages'
+import {
+  AppleCarousel,
+  AppleContinuousCarousel,
+} from '@/components/common/Carousels'
 
 import s from './Home.module.scss'
 
@@ -13,6 +17,9 @@ export default function Home() {
         </p>
       </div>
       <AppleCarousel slides={APPLE_SLIDE_IMAGES} />
+      <div className={s['continuous-carousel']}>
+        <AppleContinuousCarousel slides={APPLE_CONTINUOUS_SLIDE_IMAGES} />
+      </div>
     </section>
   )
 }

@@ -32,7 +32,10 @@
     display: flex;
     flex-direction: column;
 
-    background: linear-gradient(var(--rgba-color-black) 50%, var(--rgba-color-black-70)),
+    background: linear-gradient(
+        var(--rgba-color-black) 50%,
+        var(--rgba-color-black-70)
+      ),
       linear-gradient(
         180deg,
         var(--rgba-color-black-40) 0%,
@@ -55,7 +58,8 @@
       width: 100%;
       height: 100%;
 
-      transition: background 0.7s;
+      transition: background 1s;
+      transition-timing-function: cubic-bezier(0.8, -0.04, 0.64, 0.82);
     }
 
     &--lat::after {

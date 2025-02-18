@@ -14,3 +14,10 @@ export interface AppleSlideImage {
   genre: string
   title: string
 }
+
+export interface AppleContinuousSlideImage {
+  id: number
+  src: string
+  mobileSrc: string
+  title: string
+}

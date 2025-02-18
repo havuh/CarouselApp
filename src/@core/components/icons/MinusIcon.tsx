@@ -1,6 +1,6 @@
 import type { IconProps } from '@core/types/components'
 
-export default function GridAltIcon({
+export default function MinusIcon({
   className = 'icon',
   size = 24,
   color = 'currentColor',
