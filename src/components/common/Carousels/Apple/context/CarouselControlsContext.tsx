@@ -1,6 +1,13 @@
 'use client'
 
-import { createContext, useContext, useState, useRef, useMemo } from 'react'
+import {
+  createContext,
+  useContext,
+  useState,
+  useRef,
+  useMemo,
+  useEffect,
+} from 'react'
 import { SwiperRef } from 'swiper/react'
 
 interface CarouselControlsContextType {
@@ -21,19 +28,23 @@ export function CarouselControlsProvider({
   const swipersRef = useRef<Map<string, SwiperRef | null>>(new Map())
 
   const togglePlay = () => {
-    setIsPlaying((prev) => {
-      const playing = !prev
-      swipersRef.current.forEach((swiper) => {
-        if (swiper) {
-          playing
-            ? swiper.swiper.autoplay.start()
-            : swiper.swiper.autoplay.stop()
-          swiper.swiper.update()
-        }
-      })
-      return playing
-    })
+    setIsPlaying((prev) => !prev)
   }
+
+  useEffect(() => {
+    swipersRef.current.forEach((swiper) => {
+      if (!swiper) return
+
+      if (isPlaying) {
+        swiper.swiper.autoplay.start()
+        swiper.swiper.slideNext()
+      } else {
+        // const currentTranslate = swiper.swiper.translate
+        // swiper.swiper.setTranslate(currentTranslate)
+        swiper.swiper.autoplay.stop()
+      }
+    })
+  }, [isPlaying])
 
   const registerSwiper = (id: string, swiper: SwiperRef | null) => {
     if (swiper) {

@@ -1,6 +1,6 @@
-import { AppleContinuousSlideImage } from '../types/mocks'
+import { ContinuousSlideImage } from '../types/mocks'
 
-export const APPLE_CONTINUOUS_SLIDE_IMAGES: AppleContinuousSlideImage[] = [
+export const APPLE_CONTINUOUS_SLIDE_IMAGES: ContinuousSlideImage[] = [
   {
     id: 1,
     src: 'https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/5b/b3/4a/5bb34a60-695c-a96f-75ec-8a957fc2a20b/45899847-e52c-44a1-9ce5-09aedebb7a78.png/834x472.jpg',
