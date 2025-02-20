@@ -1,4 +1,4 @@
-import { ContinuousSlideImage } from '../types/mocks'
+import { ContinuousSlideImage } from '@core/types/mocks'
 
 export const APPLE_CONTINUOUS_SLIDE_IMAGES: ContinuousSlideImage[] = [
   {

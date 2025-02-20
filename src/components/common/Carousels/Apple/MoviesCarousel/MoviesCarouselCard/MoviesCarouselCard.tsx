@@ -1,6 +1,6 @@
 import { useScreenWidth } from '@core/hooks/useScreenWidth'
 import { AppleSlideImage } from '@core/types/mocks'
-import { ATV } from '@core/mocks/appleSlideImages'
+import { ATV } from '@core/mocks/carousels/appleSlideImages'
 import { useSwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 import Link from 'next/link'

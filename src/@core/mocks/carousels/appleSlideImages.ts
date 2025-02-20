@@ -1,4 +1,4 @@
-import { AppleSlideImage } from '../types/mocks'
+import { AppleSlideImage } from '@core/types/mocks'
 
 export const ATV =
   'https://www.apple.com/v/home/ca/images/tv-plus-gallery/logo_hero_light__d7t8cya4x26a_small.png'

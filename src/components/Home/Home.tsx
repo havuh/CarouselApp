@@ -1,5 +1,5 @@
-import { APPLE_SLIDE_IMAGES } from '@core/mocks/appleSlideImages'
-import { APPLE_CONTINUOUS_SLIDE_IMAGES } from '@core/mocks/appleContinuousSlideImages'
+import { APPLE_SLIDE_IMAGES } from '@core/mocks/carousels/appleSlideImages'
+import { APPLE_CONTINUOUS_SLIDE_IMAGES } from '@core/mocks/carousels/appleContinuousSlideImages'
 import {
   MoviesCarousel,
   ContinuousCarousel,

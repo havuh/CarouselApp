@@ -1,7 +1,115 @@
+* {
+  -o-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -webkit-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* This will work on Firefox */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-neutral-300);
+  }
+}
+
+html {
+  text-size-adjust: 100%;
+}
+
+#__next {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
+  background: var(--color-white);
+  color: var(--color-text-primary);
+  font-weight: var(--regular);
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+}
+
+body,
+main,
+section {
+  width: 100%;
+}
+
+input,
+select,
+textarea {
+  appearance: none;
+}
+
+input,
+select,
+textarea,
+button {
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+ul {
+  display: block;
   margin: 0;
   padding: 0;
-  background-color: var(--color-white);
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
 }
 
 h1,
@@ -17,14 +125,26 @@ p {
   margin: 0;
 }
 
-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+svg,
+img {
+  display: block;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+img {
+  max-width: 100%;
+  max-height: 100%;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin: 0;
 }

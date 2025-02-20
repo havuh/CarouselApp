@@ -1,0 +1,16 @@
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__image {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__caption {
+    margin-left: 8px;
+    color: var(--color-primary-500);
+    font-weight: 700;
+  }
+}

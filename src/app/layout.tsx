@@ -1,5 +1,6 @@
 import { Public_Sans } from 'next/font/google'
 import '@styles/app.scss'
+import { Navbar } from '@core/components/navigation'
 
 export const metadata = {
   title: 'Rio',
@@ -18,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
