@@ -21,7 +21,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Navbar />
-        {children}
+        <main
+          style={{
+            paddingTop: '67px',
+          }}
+        >
+          {children}
+        </main>
       </body>
     </html>
   )

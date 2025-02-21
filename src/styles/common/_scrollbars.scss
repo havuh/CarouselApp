@@ -4,18 +4,15 @@
   ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--color-neutral-200);
   }
 
   ::-webkit-scrollbar:hover {
-    width: 4px;
-    height: 4px;
-    background-color: rgba(0, 0, 0, 0.06);
+    background-color: var(--color-neutral-400);
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 999px;
-    background: var(--color-primary);
+    background: var(--color-neutral-800);
     transition:
       background-color 0.2s linear,
       width 0.2s;
@@ -27,6 +24,6 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #101927;
+    background: var(--color-neutral-200);
   }
 }

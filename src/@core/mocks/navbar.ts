@@ -6,4 +6,14 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     title: 'Inicio',
     href: '/',
   },
+  {
+    id: 2,
+    title: 'Sobre nosotros',
+    href: '/',
+  },
+  {
+    id: 3,
+    title: 'Créditos',
+    href: '/',
+  },
 ]

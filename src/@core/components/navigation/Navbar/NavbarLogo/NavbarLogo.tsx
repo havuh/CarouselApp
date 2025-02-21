@@ -1,9 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import cn from 'clsx'
 
 import s from './NavbarLogo.module.scss'
 
-export default function NavbarLogo() {
+interface NavbarLogoProps {
+  blackAndWhite?: boolean
+}
+
+export default function NavbarLogo({ blackAndWhite = false }: NavbarLogoProps) {
   const prefix = 'navbar-logo'
 
   return (
@@ -14,7 +19,9 @@ export default function NavbarLogo() {
         aria-hidden="true"
         width={40}
         height={40}
-        className={s[`${prefix}__image`]}
+        className={cn(s[`${prefix}__image`], {
+          [s[`${prefix}__image--black-and-white`]]: blackAndWhite,
+        })}
       />
       <span className={s[`${prefix}__caption`]}>
         Rio <br /> Carousels

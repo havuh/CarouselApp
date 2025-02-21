@@ -40,11 +40,10 @@ export default function MoviesCarouselCard({
               src={ATV}
               alt=""
               aria-hidden="true"
-              width={300}
-              height={50}
+              width={40}
+              height={28}
               style={{
                 width: 'auto',
-                height: 'auto',
               }}
             />
           </div>

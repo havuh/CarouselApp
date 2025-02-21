@@ -8,9 +8,13 @@
     height: 40px;
   }
 
+  &__image--black-and-white {
+    filter: grayscale(100%) contrast(1000%);
+  }
+
   &__caption {
     margin-left: 8px;
-    color: var(--color-primary-500);
+    color: var(--color-white);
     font-weight: 700;
   }
 }

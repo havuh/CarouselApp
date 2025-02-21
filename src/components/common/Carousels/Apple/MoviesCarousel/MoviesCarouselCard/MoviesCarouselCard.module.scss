@@ -74,11 +74,13 @@
       &--header {
         padding-top: 20px;
         padding-bottom: 5px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
       }
 
       &--title {
-        text-align: center;
+        display: flex;
+        justify-content: center;
 
         &__img {
           object-fit: contain;

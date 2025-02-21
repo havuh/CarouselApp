@@ -1,5 +1,14 @@
 .root {
-  border-bottom: 1px solid var(--color-neutral-300);
+  border-bottom: 1px solid var(--color-primary-600);
+  background-color: var(--color-primary-500);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hidden {
+  transform: translateY(-100%);
 }
 
 .navbar {
@@ -9,13 +18,21 @@
 
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  @include media(">=phone-xl") {
+    justify-content: space-between;
+  }
 
   &__list {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    margin-left: 54px;
+    display: none;
+
+    @include media(">=phone-xl") {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__item {
@@ -23,6 +40,7 @@
     margin: 0;
     padding: 0;
     margin-right: 24px;
+    color: var(--color-white);
   }
 
   &__link {
